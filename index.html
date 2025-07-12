@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XI DKV 2 | SMK Negeri 3 Kuningan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f9fafb;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="h-8 w-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold" style="background-image: url('assets/logo.jpg'); background-size: cover; background-position: center;"></div>
+                        <span class="ml-2 text-xl font-bold text-gray-900">XI DKV 2</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Beranda</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Jadwal</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Galeri</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Pengumuman</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Buka menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-white">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Beranda</a>
+                <a href="index2.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Jadwal</a>
+                <a href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Galeri</a>
+                <a href="#" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Pengumuman</a>
+                <button class="w-full text-left pl-3 pr-4 py-2 border-t border-gray-200 text-base font-medium text-blue-600 hover:text-blue-800 hover:bg-blue-50">Masuk</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto relative">
+            <div class="text-center relative z-10">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
+                    Selamat Datang di Kelas XI DKV 2
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100">
+                    Kelas XI Desain Komunikasi Visual Angkatan 2024/2025 | SMK Negeri 3 Kuningan
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <button class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                    Info Kelas
+                </button>
+                <a href="jadwal.html" class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 bg-opacity-60 hover:bg-opacity-70 md:py-4 md:text-lg md:px-10">
+                    Jadwal Pelajaran
+                </a>
+            </div>
+            <div class="mt-16 max-w-5xl mx-auto">
+                <div class="relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl blur"></div>
+                    <div class="relative bg-white rounded-xl shadow-xl overflow-hidden">
+                        <img src="assets/Memories.jpg" alt="Siswa kelas XI-DKV 2 sedang belajar desain grafis di ruang kelas dengan komputer" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Info -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Informasi Kelas
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                    Profil kelas dan informasi penting untuk siswa XI DKV 2
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Class Structure -->
+                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-users text-xl"></i>
+                        </div>
+                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Struktur Kelas</h3>
+                        <div class="mt-6 space-y-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Ketua Kelas:</span>
+                                <span class="font-medium">Latif Iskandar</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Wakil Ketua:</span>
+                                <span class="font-medium">Fahri Ahmad Maulana</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Bendahara 1:</span>
+                                <span class="font-medium">Rosdiana</span>
+                            </div>
+                             <div class="flex justify-between">
+                                <span class="text-gray-600">Bendahara 2:</span>
+                                <span class="font-medium">Elmira Khaerunnisa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sekretaris 1:</span>
+                                <span class="font-medium">M. Agung Laksana</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sekretaris 2:</span>
+                                <span class="font-medium">Rayna Aurelya</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Schedule -->
+                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-md bg-green-100 text-green-600">
+                            <i class="fas fa-calendar-alt text-xl"></i>
+                        </div>
+                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Jadwal Rutin</h3>
+                        <div class="mt-6 space-y-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Masuk Sekolah:</span>
+                                <span class="font-medium">Pukul 06.30 WIB </span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Piket Kelas:</span>
+                                <span class="font-medium">Senin - Jumat</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Pelajaran Olahraga:</span>
+                                <span class="font-medium">Kamis</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Pelajaran DKV/Jurusan:</span>
+                                <span class="font-medium">Senin & Rabu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Teachers -->
+                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-md bg-purple-100 text-purple-600">
+                            <i class="fas fa-chalkboard-teacher text-xl"></i>
+                        </div>
+                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Guru Pengajar</h3>
+                        <div class="mt-6 space-y-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Wali Kelas:</span>
+                                <span class="font-medium">Dadi Nurhayadi, S.Pd.</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">KK-DKV:</span>
+                                <span class="font-medium">Hendra, S.Pd.</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Matematika:</span>
+                                <span class="font-medium">Dadi Nurhayadi, S.Pd.</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Bahasa Inggris:</span>
+                                <span class="font-medium">Dany Yusuf.R, S.Pd.</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">PKDK:</span>
+                                <span class="font-medium">Hendra, S.Pd.</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sejarah:</span>
+                                <span class="font-medium">Kurniasih, S.Pd.</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">PPKN:</span>
+                                <span class="font-medium">Sri Sulasari, S.Pd.</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Bahasa Indonesia:</span>
+                                <span class="font-medium">Dulhalim, S.Pd.</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Bahasa Sunda:</span>
+                                <span class="font-medium">Iqbal Kurniawan, S.Pd.</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">PABP:</span>
+                                <span class="font-medium">Yuyu Yuningsih, S.Pd.I.</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">PJOK:</span>
+                                <span class="font-medium">H. Yani Rahmayani, S.Pd.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcements -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Pengumuman Terkini
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                    Berita dan informasi penting untuk kelas XI DKV 2
+                </p>
+            </div>
+
+            <div class="mt-12 space-y-6">
+                <!-- Announcement 1 -->
+                <div class="card-hover bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-blue-100 rounded-md p-3">
+                                <i class="fas fa-bullhorn text-blue-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-lg font-medium text-gray-900">Kenaikan Kelas</h3>
+                                    <span class="text-xs text-gray-500 ml-2">2 hari lalu</span>
+                                </div>
+                                <p class="mt-2 text-gray-600">
+                                    Semua Kelas X DKV 2 Telah dinyatakan Naik kelas ke kelas XI DKV 2. Selamat kepada semua siswa! Persiapkan diri untuk tahun ajaran baru dengan semangat yang baru.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Announcement 2 -->
+                <div class="card-hover bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-yellow-100 rounded-md p-3">
+                                <i class="fas fa-exclamation-triangle text-yellow-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-lg font-medium text-gray-900">Raport</h3>
+                                    <span class="text-xs text-gray-500 ml-2">1 minggu lalu</span>
+                                </div>
+                                <p class="mt-2 text-gray-600">
+                                   Silahkan semua siswa untuk bisa dicek kembali nilai raport semester genap. Jika ada kesalahan atau pertanyaan, segera lapor ke wali kelas masing-masing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Announcement 3 -->
+                <div class="card-hover bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-green-100 rounded-md p-3">
+                                <i class="fas fa-calendar-check text-green-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-lg font-medium text-gray-900">Perihal Waktu Masuk Sekolah</h3>
+                                    <span class="text-xs text-gray-500 ml-2">2 minggu lalu</span>
+                                </div>
+                                <p class="mt-2 text-gray-600">
+                                    Semua siswa diharapkan untuk masuk sekolah tepat waktu, yaitu pukul 06.30 WIB. Keterlambatan akan dikenakan sanksi sesuai dengan peraturan sekolah. Mohon kerjasamanya untuk disiplin waktu.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <button class="px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                    Lihat Semua Pengumuman
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Galeri Foto Kelas
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                    Dokumentasi Kegiatan, Dan Belajar Mengajar XI DKV 2
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Kartu -->
+                <div class="card-hover bg-gray-50 rounded-lg shadow-sm overflow-hidden transition-all duration-300">
+                <img onclick="openModal(this.src)" class="w-full h-48 object-cover cursor-pointer" src="assets/Make Up.jpg" alt="Siswa kelas XI-DKV 2 sedang bekerja pada proyek desain di ruang komputer">
+                <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900">Kelas X DKV 2 Memenangkan juara 3 Lomba Masak</h3>
+                    <p class="mt-2 text-gray-600">20 Juni 2025</p>
+                </div>
+                </div>
+
+                <!-- Modal untuk gambar -->
+                <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-80 flex items-center justify-center" onclick="closeModal()">
+                <img id="modalImage" class="max-w-4xl max-h-[90vh] rounded-lg shadow-lg" />
+                </div>
+
+                <script>
+            function openModal(src) {
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalImage');
+                modalImg.src = src;
+                modal.classList.remove('hidden');
+            }
+
+            function closeModal() {
+                const modal = document.getElementById('imageModal');
+                modal.classList.add('hidden');
+            }
+            </script>
+
+
+
+                <!-- Photo 2 -->
+                <div class="card-hover bg-gray-50 rounded-lg shadow-sm overflow-hidden transition-all duration-300">
+                    <img onclick="openModal(this.src)" class="w-full h-48 object-cover cursor-pointer" src="assets/epep.jpg" alt="Siswa kelas XI-DKV 2 sedang bekerja pada proyek desain di ruang komputer">
+                    <div class="p-4">
+                        <h3 class="text-lg font-medium text-gray-900">Kelas X DKV 2 Memenangkan Juara 1 lomba Free Fire </h3>
+                        <p class="mt-2 text-gray-600">20 Juni 2025</p>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="card-hover bg-gray-50 rounded-lg shadow-sm overflow-hidden transition-all duration-300">
+                    <img onclick="openModal(this.src)" class="w-full h-48 object-cover cursor-pointer" src="assets/Pramuka.jpg" alt="Siswa kelas XI-DKV 2 sedang bekerja pada proyek desain di ruang komputer">
+                    <div class="p-4">
+                        <h3 class="text-lg font-medium text-gray-900">Kelas X DKV 2 Memenangkan Juara 1 Lomba Pionnering</h3>
+                        <p class="mt-2 text-gray-600">15 Desember 2024</p>
+                    </div>
+                </div>
+
+            <a href="galeri.html">
+            <button class="px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                Lihat Galeri Lengkap
+            </button>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Projects -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-blue-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Karya Siswa Terbaik
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
+                    Hasil karya kreatif siswa XI-DKV 2
+                </p>
+            </div>
+
+            <div class="mt-12 space-y-8">
+                <!-- Project 1 -->
+                <div class="card-hover bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 md:flex">
+                    <div class="md:w-1/3">
+                        <img class="w-full h-full object-cover" src="assets/Ardi.jpg" alt="Poster Milik Ardi">
+                    </div>
+                    <div class="p-6 md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">"STOP BULLYING"</h3>
+                        <p class="mt-2 font-medium text-blue-600">Oleh: Ardi Lanno</p>
+                        <p class="mt-4 text-gray-600">
+                            Desain poster lingkungan hidup ini dibuat menggunakan Canva dengan menggunakan ide yang menarik. Memenangkan juara kategori favorit dalam lomba poster yang diselenggarakan oleh DUTA ANTI BULLYING Kab.Kuningan, Dibawah naungan Dinas Pemuda, Olahraga, dan Pariwisata
+                        </p>
+                        <div class="mt-6 flex items-center">
+                            <span class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="text-gray-500">Karya Terbaik Bulan Oktober</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card-hover bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 md:flex">
+                    <div class="md:w-1/3">
+                        <img class="w-full h-full object-cover" src="assets/Fahri.jpg" alt="Ai">
+                    </div>
+                    <div class="p-6 md:w-2/3">
+                        <h3 class="text-xl font-semibold text-gray-900">"EDUCATING THE FUTURE"</h3>
+                        <p class="mt-2 font-medium text-blue-600">Oleh: Fahri Ahmad Maulana</p>
+                        <p class="mt-4 text-gray-600">
+                            Desain Poster ini dibuat dengan Canva dan dibantu oleh Ai untuk menghasilkan desain yang menarik. Poster ini memenangkan juara 1 dalam lomba poster yang diselenggarakan oleh Universitas Muhammadiyah Sidoarjo, dengan tema "Pendidikan untuk Masa Depan".
+                        </p>
+                        <div class="mt-6 flex items-center">
+                            <span class="text-green-500 mr-2">
+                                <i class="fas fa-trophy"></i>
+                            </span>
+                            <span class="text-gray-500">TOP 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <button class="px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                    Lihat Seluruh Karya
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 pt-12 pb-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                <!-- School Info -->
+                <div>
+                    <div class="flex items-center">
+                         <div class="h-8 w-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold" style="background-image: url('assets/logo.jpg'); background-size: cover; background-position: center;"></div>
+                        <span class="ml-2 text-xl font-bold text-white">XI-DKV 2</span>
+                    </div>
+                    <p class="mt-4 text-gray-300">
+                        Kelas Desain Komunikasi Visual Angkatan 2024/2025 di SMK Negeri 3 Kuningan. 
+                    </p>
+                    <div class="mt-6 flex space-x-6">
+                        <a href="https://www.instagram.com/stmga.dkv2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="grid grid-cols-2 gap-8 md:col-span-2 md:grid-cols-3">
+                    <div>
+                        <h3 class="text-base font-medium text-white">Navigasi</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Beranda</a></li>
+                            <li><a href="jadwal.html" class="text-gray-400 hover:text-white">Jadwal</a></li>
+                            <li><a href="galeri.html" class="text-gray-400 hover:text-white">Galeri</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Pengumuman</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base font-medium text-white">Kontak</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li class="text-gray-400">SMK Negeri 3 Kuningan</li>
+                            <li class="text-gray-400">Jalan Raya Cirendang</li>
+                            <li class="text-gray-400">Kec.Cigugur, Kab.Kuningan</li>
+                            <li class="text-gray-400">Telp: (0232) 876833</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base font-medium text-white">Kontak Utama</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li class="text-gray-400">Dadi Nurhayadi, S.Pd.</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                <div class="flex space-x-6 md:order-2">
+                    <a href="#" class="text-gray-400 hover:text-white">Kebijakan Privasi</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Syarat & Ketentuan</a>
+                </div>
+                <p class="mt-8 text-gray-400 text-sm md:mt-0 md:order-1">
+                    &copy; 2025 Kelas XI-DKV 2 SMK Negeri 3 Kuningan. Semua hak cipta dilindungi.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Simple dark mode toggle
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        darkModeToggle.className = 'fixed bottom-4 right-4 w-12 h-12 rounded-full bg-gray-800 text-white shadow-lg flex items-center justify-center z-50';
+        darkModeToggle.title = 'Toggle Dark Mode';
+        
+        darkModeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark');
+            if (document.body.classList.contains('dark')) {
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                darkModeToggle.style.backgroundColor = '#f8fafc';
+                darkModeToggle.style.color = '#1e293b';
+            } else {
+                darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                darkModeToggle.style.backgroundColor = '#1e293b';
+                darkModeToggle.style.color = '#f8fafc';
+            }
+        });
+
+        document.body.appendChild(darkModeToggle);
+    </script>
+</body>
+</html>

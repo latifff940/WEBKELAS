@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri XI DKV 2</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                  0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-blue-600 py-8 text-center text-white">
+    <h1 class="text-3xl font-bold">Galeri Foto XI DKV 2</h1>
+    <p class="mt-2 text-lg">Kumpulan dokumentasi kegiatan kelas</p>
+  </header>
+
+  <!-- Gallery -->
+  <section class="py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Foto 1 -->
+        <div class="card-hover bg-gray-50 rounded-lg shadow-sm overflow-hidden transition-all duration-300">
+          <img onclick="openModal(this.src)" class="w-full h-48 object-cover cursor-pointer" src="assets/Main bola.jpg" alt="Futsal Expo">
+          <div class="p-4">
+            <h3 class="text-lg font-medium text-gray-900">Lomba Futsal Expo</h3>
+            <p class="mt-2 text-gray-600">20 Juni 2025</p>
+          </div>
+        </div>
+
+        <!-- Foto 2 -->
+        <div class="card-hover bg-gray-50 rounded-lg shadow-sm overflow-hidden transition-all duration-300">
+          <img onclick="openModal(this.src)" class="w-full h-48 object-cover cursor-pointer" src="assets/Hardiknas.jpg" alt="Hardiknas">
+          <div class="p-4">
+            <h3 class="text-lg font-medium text-gray-900">Hardiknas 2025</h3>
+            <p class="mt-2 text-gray-600">2 Mei 2025</p>
+          </div>
+        </div>
+
+        <!-- Foto 3 -->
+        <div class="card-hover bg-gray-50 rounded-lg shadow-sm overflow-hidden transition-all duration-300">
+          <img onclick="openModal(this.src)" class="w-full h-48 object-cover cursor-pointer" src="assets/Memories.jpg" alt="Kegiatan Desain">
+          <div class="p-4">
+            <h3 class="text-lg font-medium text-gray-900">Proyek Desain Grafis</h3>
+            <p class="mt-2 text-gray-600">18 Maret 2025</p>
+          </div>
+        </div>
+
+        <!-- Tambahkan lebih banyak foto di sini -->
+        <!-- Foto 4 -->
+        <div class="card-hover bg-gray-50 rounded-lg shadow-sm overflow-hidden transition-all duration-300">
+          <img onclick="openModal(this.src)" class="w-full h-48 object-cover cursor-pointer" src="assets/Maulid nabi.jpg" alt="Kegiatan kelas">
+          <div class="p-4">
+            <h3 class="text-lg font-medium text-gray-900">Kelas X DKV 2 Juara 1 Lomba Pidato & Juara 3 Lomba Kaligrafi</h3>
+            <p class="mt-2 text-gray-600">25 September 2024</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-80 flex items-center justify-center" onclick="closeModal()">
+    <img id="modalImage" class="max-w-4xl max-h-[90vh] rounded-lg shadow-lg" />
+  </div>
+
+  <!-- Script -->
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      modalImg.src = src;
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>
